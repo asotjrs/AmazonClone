@@ -19,6 +19,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import HomeScreen from './src/Screens/HomeScreen'
 
 
 
@@ -32,7 +33,7 @@ const App = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Text style={{fontSize:70}}>{"Helooooooooooo World"}</Text>
+      <HomeScreen/>
 
     </SafeAreaView>
   );
