@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet ,Image} from 'react-native'
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const HomeScreen = () => {
     return (
@@ -13,7 +14,22 @@ const HomeScreen = () => {
                 {
                 //`ratings....`
                 }
-                <Text style={styles.price}>{`Starting from $13.32`}</Text>
+                <View style={styles.ratingContainer}>
+                    <FontAwesome name="star" size={18} color={"#e47911"}/>
+                    <FontAwesome name="star" size={18} color={"#e47911"}/>
+                    <FontAwesome name="star" size={18} color={"#e47911"}/>
+                    <FontAwesome name="star-half-full" size={18} color={"#e47911"}/>
+                    <FontAwesome name="star-o" size={18} color={"#e47911"}/>
+                    <Text>122388</Text>
+
+                </View>
+                <Text style={styles.price}>
+                    {`Starting from $13.32 `}
+                
+                <Text style={styles.oldPrice}>{` $16.83`}</Text>
+
+                </Text>
+
 
 
                 </View>
@@ -26,12 +42,13 @@ const HomeScreen = () => {
 
 const styles=StyleSheet.create({
     page:{
+        padding:10
 
     },
 
     root:{
         flexDirection:'row',
-        margin:10,
+        
         borderWidth:1,
         borderColor:'#D1D1D1',
         borderRadius:10,
@@ -41,15 +58,16 @@ const styles=StyleSheet.create({
 
 
     image:{
-
+        flex:2,
         height:150,
-        width:100
+        width:100,
+        resizeMode:'contain'
 
 
     },
     rightContainer:{
         padding:10,
-        flex:1,
+        flex:3,
         //flexDirection: 'column'
 
 
@@ -57,9 +75,26 @@ const styles=StyleSheet.create({
 
     title:{
 
+        fontSize:18,
+
 
     },
     price:{
+        fontSize:16,
+        fontWeight:'bold'
+
+    },
+
+    ratingContainer:{
+        flexDirection:'row',
+        alignItems:'center'
+
+    },
+    oldPrice:{
+        fontSize:12,
+        textDecorationLine:'line-through',
+        
+    
 
     }
 
