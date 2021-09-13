@@ -39,29 +39,20 @@ const styles=StyleSheet.create({
 
 
     },
-    price:{
-        fontSize:16,
-        fontWeight:'bold'
-
-    },
+ 
 
     ratingContainer:{
         flexDirection:'row',
         alignItems:'center'
 
     },
-    oldPrice:{
-        fontSize:12,
-        textDecorationLine:'line-through',
-        
+   
     
 
-    }
 
 
 
 
-
-});
+})
 
 export default styles;

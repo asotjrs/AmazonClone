@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Image} from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
+import CPrice from '../../Components/CPrice'
 
 interface ProductItemProps{
      item: { id: string; title: string; image: string; avgRating: number; ratings: number; price: number; oldPrice?: number; } }
@@ -9,9 +10,8 @@ interface ProductItemProps{
 
 
 
-const ProductItem = (props: ProductItemProps) => {
+const ProductItem = ({item}: ProductItemProps) => {
 
-    const {item}=props;
     return (
         <View style={styles.page}>
             <View style={styles.root}>
@@ -41,12 +41,7 @@ const ProductItem = (props: ProductItemProps) => {
                     <Text>{item.avgRating}</Text>
 
                 </View>
-                <Text style={styles.price}>
-                    {`$${item.price}`}
-                
-                <Text style={styles.oldPrice}>{`  $${item.oldPrice}`}</Text>
-
-                </Text>
+             <CPrice price={item.price} oldPrice={item.oldPrice ? item.oldPrice: -1}/>
 
 
 
