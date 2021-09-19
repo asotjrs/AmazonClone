@@ -3,7 +3,7 @@ import { Text, Pressable, StyleSheet } from 'react-native'
 
 interface ButtonProps{
     text:string;
-    onPress: ()=>{}
+    onPress: ()=>void
 }
 
 const CButton = ({text,onPress}:ButtonProps) => {
@@ -23,12 +23,17 @@ root:{
     margin:10,
     height:35,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    borderRadius:5,
+    borderWidth:1,
+    borderColor:'#a15e1b'
 
 
 },
 
 text:{
+
+    fontSize:16
 
 
 }
